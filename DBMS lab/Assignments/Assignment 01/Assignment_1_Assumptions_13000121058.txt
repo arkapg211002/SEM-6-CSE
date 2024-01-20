@@ -1,0 +1,9 @@
+ASSUMPTIONS
+1. A driver can enroll for multiple tests.
+2. A test can be enrolled by one driver.
+3. A driver can approach multiple examiners.
+4. An examiner can be approached by multple drivers.
+5. An examiner conducts multiple tests.
+6. An examiner gives multiple licences.
+7. If one test is passed one licence is obtained
+8. Licence can be for two wheeler or four wheeler type vehicles
