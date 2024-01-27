@@ -1,0 +1,34 @@
+1. Construct an ER diagram.
+2. List your assumptions and clearly indicate the cardinality mappings as well as
+   any role indicators in your ER diagram.
+3. Map the ERD in the relational model corresponding to the described application. 
+4. Also make sure to have the primary keys and foreign keys clearly
+
+
+The Hudson Engineering Group (HEG) has contacted you to create a conceptual 
+model whose application will meet the expected database requirements for the 
+company’s training program. The HEG administrator gives you the description (see 
+below) of the training group’s operating environment. The HEG has 12 instructors 
+and can handle up to 30 trainees per class. HEG offers five “advanced technology” 
+courses, each of which may generate several classes. If a class has fewer than 10 
+trainees, it will be cancelled. Therefore, it is possible for a course not to generate 
+any classes. Each class is taught by one instructor. Each instructor may teach up to 
+two classes or may be assigned to do research only. Each trainee may take up to two 
+classes per year.
+
+
+
+13000121058					ER DIAGRAM FOR HUDSON ENGINEERING GROUP					CA1
+13000121058				RELATIONAL MODEL FOR HUDSON ENGINEERING GROUP				CA1
+
+ASSUMPTIONS
+1. An instructor can teach zero or more classes. According to the question the maximum number of class can be 2.
+2. A class can be taught by one instructor at a time.
+3. An instructor can have zero or more trainee. According to the question the maximum number of trainee can be 60 as one instructor can teach maximum 2 classes. A class can have maximum 30 trainee.
+4. A trainee can be taught by one instructor in a class.
+5. A trainee can enroll in multiple classes. The maximum number of classes is 2 in a year.
+6. A trainee can be male or female.
+7. A class has unique trainee. A class can have minimum 10 and maximum 30 trainees.
+8. A course can be given to multiple classes.
+9. A class can be given for one course at a time.
+10.A course can be optional or mandatory depending on the prerequisites.
