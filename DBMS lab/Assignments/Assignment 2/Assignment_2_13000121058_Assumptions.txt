@@ -1,9 +1,0 @@
-ASSUMPTIONS
-1. A player can play for multiple teams.
-2. A player can be either male or female.
-3. A player can be junior player or senior player.
-4. A junior player is selected in a junior team.
-5. A senior player is selected in a senior team.
-6. A team will have players unique.
-7. A team plays multiple games.
-8. One game is played by one team alongside another team.
