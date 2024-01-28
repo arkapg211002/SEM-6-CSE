@@ -1,0 +1,2 @@
+### 1. Take a decimal number from user. Convert it to different bases (e.g.: 2,8,16 etc.) and send those values to message queue. Write three separate programs to read and display the binary, octal and hex value from the message queue distinctively.
+### 2. Create a message queue. One process will take name and roll number of 'N' students and send those to message queue. Second process will read the names, sort those and send back to message queue; third process will do the same on roll numbers. Then first process will read the entire data and print.
