@@ -36,7 +36,7 @@ void main()
 		
 		strcpy(buf,message.data);
 		num=atoi(buf);
-		
+/*		
 		i=0;
 		while(num>0)
 		{
@@ -51,8 +51,8 @@ void main()
 			rev[j]=res[i-j-1]+'0';
 		}
 		rev[j]='\0';
-
-		printf("Octal Output of %s is %s\n",buf,rev);
+*/
+		printf("Octal Output of %s is %032o\n",buf,num);
 	}
 
 }
