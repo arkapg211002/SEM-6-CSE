@@ -36,7 +36,7 @@ void main()
 		
 		strcpy(buf,message.data);
 		num=atoi(buf);
-		
+/*		
 		i=0;
 		while(num>0)
 		{
@@ -55,8 +55,21 @@ void main()
 			rev[j]=res[i-j-1];
 		}
 		rev[j]='\0';
+*/
 
-		printf("Hex Output of %s is %s\n",buf,rev);
+/*
+
+To get the string form of octal form
+
+char ch[32];
+sprintf(ch,"%032o",num);
+
+To get the string form of hex form
+
+sprintf(ch,"%032x",num);
+ 
+*/
+		printf("Hex Output of %s is %032x\n",buf,num);
 	}
 
 }
