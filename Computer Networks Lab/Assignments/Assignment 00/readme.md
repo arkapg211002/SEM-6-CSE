@@ -1,0 +1,1 @@
+### Write C Programs to implement FIFO communication between processes. Process-1 will send N integers to Process-2, which will sort the integers (in descending order) and send back to Process-1. Process-1 will display the result.
