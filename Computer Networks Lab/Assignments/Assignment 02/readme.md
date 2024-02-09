@@ -1,0 +1,1 @@
+#### Write C Programs to implement a simple client-server application using Unix File socket. The client will take a bit-stream from the user and send it to server. The server will add a parity bit to it and send the modified bit-stream to the corresponding client. The client will print the result.
