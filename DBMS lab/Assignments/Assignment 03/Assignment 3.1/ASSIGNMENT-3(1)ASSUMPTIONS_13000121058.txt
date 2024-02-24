@@ -1,0 +1,12 @@
+ASSUMPTIONS
+
+1. Hospital staff members, including doctors and nurses, are uniquely identified by a staff ID and have associated attributes such as name (first name, middle name, last name) and phone numbers.
+2. Doctors have specific offices and can have up to three specializations, enhancing their ability to provide specialized care.
+3. Nurses, each with one specialization, belong to specific hospital departments, facilitating efficient allocation and coordination of nursing resources.
+4. Nurses assist doctors in their duties, forming a vital support system within the hospital's healthcare framework.
+5. Many nurses can work with one doctor, fostering collaboration and teamwork among healthcare professionals.
+6. Doctors engage in consultations with colleagues, allowing for knowledge exchange and collaborative decision-making in patient care.
+7. Patient information, including patient ID, name, insurance details, date of admission, and checked-out date, is meticulously recorded to ensure comprehensive healthcare management.
+8. Patients may undergo multiple tests during their hospital stay, each test identified by a unique ID and comprising attributes such as name, result, and date/time performed.
+9. Doctors are responsible for performing tests, ensuring accurate diagnosis and treatment planning for patients.
+10.The database system facilitates seamless communication and collaboration among hospital staff, ensuring efficient healthcare delivery and patient-centric services.
