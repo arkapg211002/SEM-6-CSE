@@ -6,7 +6,6 @@
 
 // Store input bits
 int input[32];
-
 // Store hamming code
 int code[32];
 
