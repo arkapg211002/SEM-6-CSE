@@ -1,18 +1,10 @@
 // Calculate VRC (Vertical Redundancy Check) : 2D parity checking
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
 
 #define maxlength 10
 #define maxmessages 10
-
-void initialize(int arr[][maxlength], int m, int n) {
-    srand(time(NULL));
-    for (int i = 0; i < m; i++)
-        for (int j = 0; j < n; j++)
-            arr[i][j] = rand() % 2;
-}
 
 void print(int arr[][maxlength], int m, int n) {
     for (int i = 0; i < m; i++) {
