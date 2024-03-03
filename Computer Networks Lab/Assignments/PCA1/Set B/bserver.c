@@ -11,11 +11,24 @@
 #define MAX 100
 char r;
 
+int count(int n)
+{
+	int c=0;
+	if(n==0) return 1;
+	while(n>0)
+	{
+		c+=1;
+		n/=10;
+	}
+	return c;
+}
+
 void check(char *input)
 {
 
 	int len=strlen(input);
 	int i,c=0,s=0,cp=0;
+	int getc=0;
 	r='1';
 	if(len<7 || len>15)
 	{
@@ -31,12 +44,24 @@ void check(char *input)
 		{
 			//printf("%d\n",s);
 			cp+=1;
+			getc=0;
 			if(c>3 || c==0 || s>255)
 			{
 				r='0';
 				c=0;
 				s=0;
 				break;
+			}
+			else
+			{
+				getc=count(s);
+				if(getc < c)
+				{
+					r='0';
+					c=0;
+					s=0;
+					break;
+				}
 			}
 			c=0;
 			s=0;
