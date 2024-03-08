@@ -1,0 +1,1 @@
+#### Create a multi-client TCP server. A client will send an IPv4 address (a.b.c.d) to the server. The server will verify whether the address is valid or not and send back 'YES' or 'NO' as a result to the client.
