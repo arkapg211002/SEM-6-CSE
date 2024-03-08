@@ -41,21 +41,21 @@ void main()
         printf("Server Waiting..\n");
         result = select(FD_SETSIZE, &testfds, NULL, NULL, NULL);
         if(result < 0) 
-	      {
+	{
             perror("select");
             exit(EXIT_FAILURE);
         }
 
         for(fd = 0; fd < FD_SETSIZE; fd++) 
-	      {
+	{
             if(FD_ISSET(fd, &testfds)) 
-	          {    
+	    {    
                 if(fd == server_fd) 
-		            {
+	        {
                     client_len = sizeof(client_address);
                     client_fds[client_count] = accept(server_fd, (struct sockaddr *)&client_address, &client_len);
                     if(client_fds[client_count] < 0) 
-		                {
+		    {
                         perror("accept");
                         continue;
                     }
@@ -63,24 +63,24 @@ void main()
                     printf("Adding Client on fd %d\n", client_fds[client_count]);
                     client_count++;
                 } 
-		            else 
-		            {
+		else 
+		{
                     ioctl(fd, FIONREAD, &nread);
                     if(nread == 0) 
-		                {
+		    {
                         close(fd);
                         FD_CLR(fd, &readfds);
                         printf("Removing Client on fd %d\n", fd);
                     } 
-		                else 
-		                {
+		    else 
+		    {
                         read(fd, input, MAX_MSG_LEN);
                         printf("Serving Client on fd %d\n", fd);
                         printf("Server Received : %s\n", input);
                         strcpy(input, "Received from server :)");
                         write(fd, input, strlen(input) + 1);
                         if(strcmp(input, "end") == 0) 
-			                  {
+			{
                             close(fd);
                             FD_CLR(fd, &readfds);
                             printf("Removing Client on fd %d\n", fd);
