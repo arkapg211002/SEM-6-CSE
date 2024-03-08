@@ -11,7 +11,6 @@
 #include <sys/time.h>
 #include <sys/ioctl.h>
 
-#define MAX 100
 #define MAX_CLIENTS 5
 #define MAX_MSG_LEN 100
 
