@@ -29,3 +29,6 @@ x.   Delete from Client_Master where the column state holds the value ‘Tamil N
 xi.  Change the name of the Salesman_Master table to Sman_Mast. 
 xii. Destroy the table Client_Master along with its data.
 ```
+![t1](https://github.com/arkapg211002/SEM-6-CSE/blob/main/DBMS%20lab/Assignments/Assignment%2004/t1.jpg)
+![t2](https://github.com/arkapg211002/SEM-6-CSE/blob/main/DBMS%20lab/Assignments/Assignment%2004/t2.jpg)
+![t3](https://github.com/arkapg211002/SEM-6-CSE/blob/main/DBMS%20lab/Assignments/Assignment%2004/t3.jpg)
