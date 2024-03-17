@@ -26,3 +26,15 @@ FROM dual;
 -- TO ROUND DATES
 SELECT ROUND(TO_DATE('1-4-1','DD-MM-YYYY'),'YEAR') FROM DUAL;
 ```
+```SQL
+-- CHECK CONSTRAINT 
+-- Query to check details of constraints on the EMPLOYEE table
+SELECT constraint_name, constraint_type, search_condition
+FROM all_constraints
+WHERE table_name = '<TABLE NAME>';
+
+-- Query to check details of a specific constraint on the EMPLOYEE table
+SELECT constraint_name, constraint_type, search_condition, r_constraint_name, delete_rule
+FROM all_constraints
+WHERE table_name = '<TABLE NAME>' AND constraint_name = '<CONSTRAINT NAME>';
+```
