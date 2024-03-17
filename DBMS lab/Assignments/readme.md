@@ -33,7 +33,7 @@ SELECT constraint_name, constraint_type, search_condition
 FROM all_constraints
 WHERE table_name = '<TABLE NAME>';
 
--- Query to check details of a specific constraint on the EMPLOYEE table
+-- Query to check details of a specific constraint on a given table
 SELECT constraint_name, constraint_type, search_condition, r_constraint_name, delete_rule
 FROM all_constraints
 WHERE table_name = '<TABLE NAME>' AND constraint_name = '<CONSTRAINT NAME>';
