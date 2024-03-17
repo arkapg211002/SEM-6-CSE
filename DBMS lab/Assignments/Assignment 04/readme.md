@@ -33,11 +33,5 @@ xii. Destroy the table Client_Master along with its data.
 ![t2](https://github.com/arkapg211002/SEM-6-CSE/blob/main/DBMS%20lab/Assignments/Assignment%2004/t2.jpg)
 ![t3](https://github.com/arkapg211002/SEM-6-CSE/blob/main/DBMS%20lab/Assignments/Assignment%2004/t3.jpg)
 
-#### Notes
-```sql
--- IF DROP NOT POSSIBLE GET THE CONSTRAINT NAME AND ALTER THE CHILD TABLE
-SELECT CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE TABLE_NAME = <table with foreign key> AND (R_CONSTRAINT_NAME IN (SELECT CONSTRAINT_NAME FROM USER_CONSTRAINTS WHERE TABLE_NAME = <table with primary key>));
-ALTER TABLE <table with foreign key> DROP CONSTRAINT <constraint_name>;
--- THEN DROP
-DROP TABLE <table with primary key>;
-```
+
+
