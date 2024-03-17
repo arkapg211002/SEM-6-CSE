@@ -21,5 +21,8 @@ DROP TABLE <table with primary key>;
 -- TO CONVERT ANY STRING DATE TO TYPE DATE
 SELECT TO_DATE('2024-03-17', 'YYYY-MM-DD') AS converted_date
 FROM dual;
-
+```
+```SQL
+-- TO ROUND DATES
+SELECT ROUND(TO_DATE('1-4-1','DD-MM-YYYY'),'YEAR') FROM DUAL;
 ```
