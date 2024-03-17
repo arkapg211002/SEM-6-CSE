@@ -17,3 +17,9 @@ ALTER TABLE <table with foreign key> DROP CONSTRAINT <constraint_name>;
 -- THEN DROP
 DROP TABLE <table with primary key>;
 ```
+```SQL
+-- TO CONVERT ANY STRING DATE TO TYPE DATE
+SELECT TO_DATE('2024-03-17', 'YYYY-MM-DD') AS converted_date
+FROM dual;
+
+```
