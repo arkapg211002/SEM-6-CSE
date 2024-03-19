@@ -1,0 +1,8 @@
+ASSUMPTIONS
+1. Doctors can treat multiple patients, and patients can be treated by multiple doctors (many-to-many relationship).
+2. Doctors can prescribe multiple tests and medications for patients.
+3. Each patient's progress can be monitored through multiple progress reports.
+4. Doctors can specialize in different medical fields such as surgery, pediatrics, cardiology, etc.
+5. Patients can be categorized as inpatients or outpatients.
+6. Tests and medications share common attributes such as ID, name, and price.
+7. Each progress report includes details such as description and date.
