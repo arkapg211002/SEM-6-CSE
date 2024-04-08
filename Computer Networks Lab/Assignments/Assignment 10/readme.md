@@ -1,1 +1,0 @@
-#### Write two programs one for the sender and another for the receiver, where the sender will broadcast a message taken as user input and all the receivers (at least three) will print the received message. This will continue forever until the user enters "QUIT" at the sender.
