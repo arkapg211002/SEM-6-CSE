@@ -341,7 +341,7 @@ connect_from_port_20=YES
 # You may restrict local users to their home directories.  See the FAQ for
 # the possible risks in this before using chroot_local_user or
 # chroot_list_enable below.
-#chroot_local_user=YES
+chroot_local_user=YES
 #
 # You may specify an explicit list of local users to chroot() to their home
 # directory. If chroot_local_user is YES, then this list becomes a list of
