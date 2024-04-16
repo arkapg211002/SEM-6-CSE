@@ -3,6 +3,7 @@
 To create your own FTP (File Transfer Protocol) server, you can use various software packages available for different operating systems. Here, I'll outline the general steps to set up an FTP server on Linux using `vsftpd` (Very Secure FTP Daemon), which is a popular choice due to its simplicity and security features. This guide assumes you are using a Linux distribution (such as Ubuntu or CentOS), but similar concepts apply to other platforms with different FTP server software.
 
 Follow : https://www.youtube.com/watch?v=t50UfbGvWhw&t=830s
+Works locally but not from other machine
 
 ### Step 1: Install `vsftpd`
 
