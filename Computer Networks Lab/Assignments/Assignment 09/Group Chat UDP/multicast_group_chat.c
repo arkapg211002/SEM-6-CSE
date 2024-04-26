@@ -88,7 +88,7 @@ int main(int argc,char **argv)
 	sockfd=socket(AF_INET,SOCK_DGRAM,0);
 	setsockopt(sockfd, SOL_SOCKET, SO_REUSEADDR, &reuse, sizeof(reuse));
 	bind(sockfd,(struct sockaddr *)&multicast,multilen);
-	mreq.imr_multiaddr.s_addr=inet_addr(argv[1]);
+	mreq.imr_multiaddr.s_addr=inet_addr("224.0.0.1");
 	mreq.imr_interface.s_addr=INADDR_ANY;
 	setsockopt(sockfd,IPPROTO_IP,IP_ADD_MEMBERSHIP,&mreq,sizeof(mreq));
 	
