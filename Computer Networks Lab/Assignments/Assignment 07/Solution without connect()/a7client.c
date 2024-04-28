@@ -27,10 +27,10 @@ void main()
 	len=sizeof(address);
 //	result=connect(sockfd,(struct sockaddr *)&address,len);
 	
-	strcpy(check,"Hello from client");
-	printf("Sending %s to the server\n",check);
-	sendto(sockfd,check,strlen(check)+1,0,(struct sockaddr *)&address,len);
-	result=recvfrom(sockfd,check,MAX,0,(struct sockaddr *)&address,&len);
+	strcpy(input,"Hello from client");
+	printf("Sending %s to the server\n",input);
+	sendto(sockfd,input,strlen(input)+1,0,(struct sockaddr *)&address,len);
+	result=recvfrom(sockfd,res,MAX,0,(struct sockaddr *)&address,&len);
 	if(result==-1)
 	{
 		printf("Cannot connect to the server\n");
@@ -39,8 +39,10 @@ void main()
 	}
 	else 
 	{
-		printf("Server sent : %s\n",check);
+		printf("Server sent : %s\n",res);
 		printf("Connected to the server\n");
+		strcpy(res,"");
+		strcpy(input,"");
 	}
 
 	while(1)
