@@ -99,7 +99,7 @@ void main()
 {
 	int server_fd,server_len,client_len,checkres;
 	struct sockaddr_in server_address,client_address;
-	char input[MAX],result[MAX],check[MAX];
+	char input[MAX],result[MAX];
 
 	server_fd=socket(AF_INET,SOCK_DGRAM,0);
 	server_address.sin_family=AF_INET;
@@ -112,12 +112,15 @@ void main()
 
 
 	client_len=sizeof(client_address);
-	checkres=recvfrom(server_fd,check,MAX,0,(struct sockaddr *)&client_address,&client_len);
+	checkres=recvfrom(server_fd,input,MAX,0,(struct sockaddr *)&client_address,&client_len);
 	if(checkres!=-1)
 	{
 		printf("Client Connected\n");
-		strcpy(check,"Hello from server");
-		sendto(server_fd,check,strlen(input)+1,0,(struct sockaddr *)&client_address,client_len);
+		printf("Server Received : %s\n",input);
+		strcpy(result,"Hello from server");
+		sendto(server_fd,result,strlen(result)+1,0,(struct sockaddr *)&client_address,client_len);
+		strcpy(input,"");
+		strcpy(result,"");
 	}
 	else
 	{
