@@ -111,7 +111,7 @@ void main()
 	printf("Sender Started\n");
 	printf("Enter size of window : ");
 	scanf("%d",&n);
-	sequence_no=1<<n;
+	sequence_no=1<<n+n;
 	th=(pthread_t *)malloc(n*sizeof(pthread_t));
 	
 	pthread_create(&rthread,NULL,(void *)&receiver,NULL);
