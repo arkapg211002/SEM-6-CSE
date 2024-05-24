@@ -11,12 +11,7 @@
 #include <time.h>
 
 #define MAX 100
-
-//struct frame
-//{
-	unsigned int sequence_no;
-	//char data[MAX];	
-//};
+unsigned int sequence_no;
 
 void main()
 {
@@ -42,7 +37,6 @@ void main()
 	setsockopt(client_fd,SOL_SOCKET,SO_RCVTIMEO,&tv,sizeof(tv));
 	
 	printf("Sender Running\n");
-	//struct frame f;
 	
 	while(1)
 	{
@@ -70,7 +64,10 @@ void main()
 					if(left>0)
 					{
 						printf("Previous ACK %d received. Ignoring\n",ack-1);
-						setsockopt(client_fd,SOL_SOCKET,SO_RCVTIMEO,&left,sizeof(time_t));
+						struct timeval timeleft;
+						timeleft.tv_sec=left;
+						timeleft.tv_usec=0;
+						setsockopt(client_fd,SOL_SOCKET,SO_RCVTIMEO,&timeleft,sizeof(struct timeval));
 					}
 					else
 					{
@@ -88,5 +85,3 @@ void main()
 		printf("\n");
 	}
 }
-
-
