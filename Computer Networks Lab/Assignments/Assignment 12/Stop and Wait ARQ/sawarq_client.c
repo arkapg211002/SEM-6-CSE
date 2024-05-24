@@ -10,6 +10,7 @@
 #include <string.h>
 #include <semaphore.h>
 #include <pthread.h>
+#include <time.h>
 
 #define MAX 100
 
