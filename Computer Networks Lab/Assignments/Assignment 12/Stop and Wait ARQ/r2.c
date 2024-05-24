@@ -11,12 +11,7 @@
 #include <time.h>
 
 #define MAX 100
-
-//struct frame
-//{
-	unsigned int sequence_no;
-	//char data[MAX];	
-//};
+unsigned int sequence_no;
 
 void main()
 {
