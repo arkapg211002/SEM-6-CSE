@@ -14,7 +14,7 @@
 
 #define MAX 100
 
-int sockfd,total=0,sequence_no=0,tcount=1;
+int sockfd,total=0,sequence_no=0,tcount=0;
 struct sockaddr_in address;
 pthread_t timer_thread;
 sem_t sem;
@@ -22,7 +22,7 @@ sem_t sem;
 void *timer(void *args)
 {
 	printf("Started timer %d\n",tcount);
-	tcount+=1;
+	// tcount+=1;
 	sleep(3);
 	total=1;
 	sem_post(&sem);
@@ -69,6 +69,7 @@ void *sender(void *args)
 		
 		sequence_no=(sequence_no+1)&1;
 		total=0;
+		tcount+=1;
 		pthread_create(&timer_thread,NULL,(void *)&timer,NULL);
 		sem_wait(&sem);
 		pthread_join(timer_thread,NULL);
