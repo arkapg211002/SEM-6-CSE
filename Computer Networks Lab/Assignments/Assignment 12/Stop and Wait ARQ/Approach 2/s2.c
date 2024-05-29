@@ -42,6 +42,17 @@ void main()
 	{
 		sequence_no=seqno;
 		printf("Sending frame with sequence number : %d\n",seqno);
+
+		// Frame Lost while sending
+		int ploss=rand()%3;
+		//printf("Packet Loss test : %d\n",ploss);
+		if(ploss==2)
+		{
+			sleep(2);
+			// Resending frame
+			printf("Timer timed out. Frame Lost.\nResending frame with sequence number : %d\n",seqno);
+		}
+		
 		write(client_fd,(void *)&sequence_no,sizeof(sequence_no));
 		setsockopt(client_fd,SOL_SOCKET,SO_RCVTIMEO,&tv,sizeof(tv));
 		time_t t1=time(NULL);
