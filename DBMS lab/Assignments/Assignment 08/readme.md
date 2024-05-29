@@ -1,3 +1,5 @@
+### PL/SQL math functions : https://enteros.com/database-performance-management/oracle-pl-sql-functions/
+
 ```
 i.Implement a PL/SQL block that will accept student id number from the user, and check is student attendance is less than 80% then display message that student cannot appear in exam.
 [Table: STUDENT (STUD_ID, primary key, STUD_NAME, STUD_ATT)].
