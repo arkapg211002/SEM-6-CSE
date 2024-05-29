@@ -9,7 +9,6 @@
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <netinet/in.h>
-#include <time.h>
 
 #define MAX 100
 struct timeval timeout;
