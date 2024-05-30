@@ -1,3 +1,5 @@
+## In relational model, give primary keys in addition to foreign keys in tables that are part of specialization/generalization.
+
 #### NOTES
 ```sql
 -- GET A LIST OF TABLES CREATED IN THE LAST N DAYS
